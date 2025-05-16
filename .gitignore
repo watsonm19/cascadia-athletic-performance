@@ -1,0 +1,40 @@
+# Node modules (if using npm or yarn)
+node_modules/
+
+# Logs
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Build output
+dist/
+build/
+
+# Dependency directories (if using package managers)
+bower_components/
+jspm_packages/
+
+# IDE and editor folders/files
+.vscode/
+.idea/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Cache files
+.cache/
+*.cache
+*.tmp
+
+# npm logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Misc
+*.bak
+*.swp
