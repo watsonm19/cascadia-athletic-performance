@@ -250,7 +250,15 @@ body {
 
 .contact p {
     text-align: center;
+}
+
+.contact .free-session {
     font-size: 1.25rem;
+}
+
+.contact .disclaimer {
+    font-size: 0.8rem;
+    color: var(--light-text);
     margin-bottom: 3rem;
 }
 
