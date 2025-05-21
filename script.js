@@ -65,4 +65,17 @@ window.addEventListener('scroll', () => {
         header.classList.add('scroll-up');
     }
     lastScroll = currentScroll;
-}); 
+});
+
+// Hero Slideshow
+const slides = document.querySelectorAll('.slide');
+let currentSlide = 0;
+
+function nextSlide() {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('active');
+}
+
+// Change slide every 5 seconds
+setInterval(nextSlide, 5000); 
