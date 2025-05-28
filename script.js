@@ -48,7 +48,7 @@ const header = document.querySelector('.header');
 let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
+    const currentScroll = window.scrollY;
     
     if (currentScroll <= 0) {
         header.classList.remove('scroll-up');
