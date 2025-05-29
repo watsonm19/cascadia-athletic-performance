@@ -22,10 +22,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Menu button functionality
 const menuButton = document.querySelector('.menu-button');
 const navLinks = document.querySelector('.nav-links');
+const closeMenu = document.querySelector('.close-menu');
 
 menuButton.addEventListener('click', () => {
     menuButton.classList.toggle('active');
     navLinks.classList.toggle('active');
+});
+
+closeMenu.addEventListener('click', () => {
+    menuButton.classList.remove('active');
+    navLinks.classList.remove('active');
 });
 
 // Close mobile menu when clicking outside

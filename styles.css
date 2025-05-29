@@ -80,6 +80,25 @@ body {
     list-style: none;
 }
 
+.close-menu {
+    display: none;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    line-height: 1;
+    transition: color 0.3s ease;
+}
+
+.close-menu:hover {
+    color: var(--primary-color);
+}
+
 .nav-links a {
     text-decoration: none;
     color: var(--text-color);
@@ -94,6 +113,10 @@ body {
 /* Mobile Navigation */
 @media (max-width: 768px) {
     .menu-button {
+        display: block;
+    }
+
+    .close-menu {
         display: block;
     }
 
