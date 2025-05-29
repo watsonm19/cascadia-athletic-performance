@@ -101,11 +101,25 @@ window.addEventListener('scroll', () => {
 const slides = document.querySelectorAll('.slide');
 let currentSlide = 0;
 
+function updateSlideImages() {
+    const isMobile = window.innerWidth <= 768;
+    slides.forEach(slide => {
+        const imageUrl = isMobile ? slide.dataset.mobile : slide.dataset.desktop;
+        slide.style.backgroundImage = `url('${imageUrl}')`;
+    });
+}
+
 function nextSlide() {
     slides[currentSlide].classList.remove('active');
     currentSlide = (currentSlide + 1) % slides.length;
     slides[currentSlide].classList.add('active');
 }
+
+// Initial setup of images
+updateSlideImages();
+
+// Update images on window resize
+window.addEventListener('resize', updateSlideImages);
 
 // Change slide every 5 seconds
 setInterval(nextSlide, 5000); 
