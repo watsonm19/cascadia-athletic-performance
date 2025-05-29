@@ -8,8 +8,32 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 behavior: 'smooth',
                 block: 'start'
             });
+            // Close mobile menu if open
+            const navLinks = document.querySelector('.nav-links');
+            const menuButton = document.querySelector('.menu-button');
+            if (navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                menuButton.classList.remove('active');
+            }
         }
     });
+});
+
+// Menu button functionality
+const menuButton = document.querySelector('.menu-button');
+const navLinks = document.querySelector('.nav-links');
+
+menuButton.addEventListener('click', () => {
+    menuButton.classList.toggle('active');
+    navLinks.classList.toggle('active');
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!menuButton.contains(e.target) && !navLinks.contains(e.target) && navLinks.classList.contains('active')) {
+        menuButton.classList.remove('active');
+        navLinks.classList.remove('active');
+    }
 });
 
 // Form handling
