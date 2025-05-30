@@ -56,6 +56,13 @@ body {
     color: var(--primary-color);
 }
 
+.logo a:visited {
+    font-weight: 700;
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
 .menu-button {
     display: none;
     padding: 0.25rem 0.5rem;
